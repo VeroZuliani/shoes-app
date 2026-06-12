@@ -12,6 +12,6 @@ createRoot(document.getElementById('root')!).render(
     {/* <NavBar/> */}
     {/* <Hero/> */}
     <Testimonials/>
-    {/* <Contact/> */}
+    <Contact/>
   </StrictMode>,
 )
