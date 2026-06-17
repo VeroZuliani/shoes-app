@@ -6,6 +6,7 @@ import Hero from './views/Hero'
 
 import Testimonials from './views/Testimonials'
 import Contact from './views/Contact'
+import Footer from './views/Footer'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,5 +14,6 @@ createRoot(document.getElementById('root')!).render(
     {/* <Hero/> */}
     <Testimonials/>
     <Contact/>
+    <Footer/>
   </StrictMode>,
 )
