@@ -1,17 +1,19 @@
+import OpinionAbout from '@/components/OpinionAbout';
+import ProductAbout from '@/components/ProductAbout';
 import { IconCircleNumber1Filled, IconCircleNumber2Filled, IconCircleNumber3Filled } from '@tabler/icons-react';
 
 const About = () => {
   return (
-    <section className="w-full min-h-screen flex items-center lg:px-30">
+    <section className="w-full max-h-screen flex items-center lg:px-30 p-16">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-10">
+           
             <div>
                 <div className="flex flex-col mb-10">
                     <h3 className="font-semibold text-base lg:text-lg mb-4">At Spike Shoes</h3>
                     <h2 className="font-medium text-4xl lg:text-6xl">We Offer :</h2>
                 </div>
 
-                {/* Item 1 */}
                 <div className="flex flex-row gap-x-5 mb-10">
                     <div>
                         <IconCircleNumber1Filled size={50}/>
@@ -19,12 +21,11 @@ const About = () => {
                     <div className="flex flex-col">
                         <div>
                             <h3 className="font-semibold text-lg lg:text-xl mb-1 text-gray-dark">Top Notch Quality</h3>
-                            <p className="font-normal text-gray-medium">At Spike we take pride in offering the finest footwear crafted with precision and dedication.</p>
+                            <p className="font-normal text-gray-medium">At Spike we take pride in offering the finest footwear crafted with precision and dedication. Step into unmatched comfort, durability, and style.</p>
                         </div>
                     </div>
                 </div>
 
-                {/* Item 2 */}
                 <div className="flex flex-row gap-x-5 mb-10">
                     <div>
                         <IconCircleNumber2Filled size={50}/>
@@ -37,7 +38,6 @@ const About = () => {
                     </div>
                 </div>
 
-                {/* Item 3 */}
                 <div className="flex flex-row gap-x-5">
                     <div>
                         <IconCircleNumber3Filled size={50}/>
@@ -52,10 +52,23 @@ const About = () => {
 
             </div>
 
-            <div>
-                <img src="https://placehold.co/400x360?" alt="" />
+
+            <div className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
+                
+                <div className="relative w-110 h-115 lg:w-full">
+                    <ProductAbout/>
+
+                    <div className='absolute bottom-16 lg:right-0 -right-20 z-20'>   
+                        <OpinionAbout/>
+                    </div>
+                </div>
+
             </div>
+
+
         </div>
+
+        
 
     </section>
   )
