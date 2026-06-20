@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Link from "./Link"
+import { IconUser, IconX, IconMenu2 } from '@tabler/icons-react';
+
 
 interface LinkData{
     text: string;
@@ -48,7 +50,7 @@ const NavBar = () => {
     <header className="w-full items-center">
         <div className="flex w-full px-4 lg:px-30 justify-between relative h-20">
             <a href="/" className="z-50 flex items-center">
-                <img src="https://placehold.co/150x60?text=SPIKE" alt="" />
+                <img src="/images/logo.png" alt="" className="w-full"/>
             </a>
 
             {/* isOpen es true: se muestra (flex), si es false: se esconde (hidden) */}
@@ -67,7 +69,7 @@ const NavBar = () => {
 
                 <div className="flex">
                     <a href="/login" className="lg:mx-4 mt-5 lg:m-0" onClick={toogleNavBar}>
-                        <img src="https://placehold.co/32?text=LOGIN" alt="" />
+                        <IconUser stroke={1} />
                     </a>
                 </div>  
             </nav>
@@ -76,9 +78,9 @@ const NavBar = () => {
             {/* Si está abierto muestra una cruz, si está cerrado muestra la hamburguesa tradicional */}
             <button className="lg:hidden flex items-start mt-5" onClick={toogleNavBar}>
                 {isOpen ? 
-                    <img src="https://placehold.co/32?text=x" alt="" /> 
+                    <IconX stroke={2} size={28}/>
                     : 
-                    <img src="https://placehold.co/32?text='☰'" alt="" /> 
+                    <IconMenu2 stroke={2} size={28}/>
                 }
             </button>
 

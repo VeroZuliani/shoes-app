@@ -11,7 +11,7 @@ import Footer from './views/Footer'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* <NavBar/> */}
+    <NavBar/>
     {/* <Hero/> */}
     <About/>
     <Testimonials/>
