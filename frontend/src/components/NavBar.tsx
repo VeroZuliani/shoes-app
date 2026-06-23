@@ -47,8 +47,8 @@ const NavBar = () => {
     }
 
   return (
-    <header className="w-full items-center">
-        <div className="flex w-full px-4 lg:px-30 justify-between relative h-20">
+    <header className="w-full items-center relative z-50">
+        <div className="flex w-full justify-between relative h-20">
             <a href="/" className="z-50 flex items-center">
                 <img src="/images/logo.png" alt="" className="w-full"/>
             </a>
@@ -76,7 +76,7 @@ const NavBar = () => {
 
             {/* Boton Hamburguesa visible en Mobile */}
             {/* Si está abierto muestra una cruz, si está cerrado muestra la hamburguesa tradicional */}
-            <button className="lg:hidden flex items-start mt-5" onClick={toogleNavBar}>
+            <button className="lg:hidden flex items-center justify-center bg-white" onClick={toogleNavBar}>
                 {isOpen ? 
                     <IconX stroke={2} size={28}/>
                     : 
