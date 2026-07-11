@@ -27,7 +27,7 @@ const product : Product[] = [
 
 const Products = () => {
   return (
-    <section className="w-full min-h-screen lg:px-30 py-16">
+    <section className="w-full min-h-screen lg:px-30 py-16 px-16">
         
         <h1 className="font-medium text-5xl mb-6">Spike Collections</h1>
 
