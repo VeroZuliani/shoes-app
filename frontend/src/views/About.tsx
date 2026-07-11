@@ -2,13 +2,18 @@ import Button from '@/components/Button';
 import OpinionAbout from '@/components/OpinionAbout';
 import ProductAbout from '@/components/ProductAbout';
 import { IconCircleNumber1Filled, IconCircleNumber2Filled, IconCircleNumber3Filled, IconCrop11Filled } from '@tabler/icons-react';
+import { motion } from "motion/react"
+
 
 const About = () => {
+
+    const items = Array.from({ length:8 })
+
   return (
     <section className="w-full min-h-screen flex flex-col items-center">
         
         {/* ABOUT SPEAK */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 w-full px-6 lg:px-0'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 w-full px-6 lg:px-0 '>
             
             <div className='lg:h-screen md:h-180 h-100'>
                 <img src="/images/about_1.jpg" alt="" className='w-full h-full object-cover'/>
@@ -38,20 +43,27 @@ const About = () => {
 
         {/* TICKER */}
         <div className='w-full mt-5 overflow-hidden'>
-            <div className='flex flex-row items-center border-y-2 p-3 border-gray-medium mb-10 lg:mb-30'>
-                <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
-                <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/>
-                <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
-                <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/>
-                <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
-                <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/>
-                <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
-                <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/>
-                <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
-                <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/>
-                <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
-                <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/> 
-            </div>
+            <motion.div className='flex flex-row items-center border-y-2 p-3 border-gray-medium mb-10 lg:mb-30 w-max whitespace-nowrap'
+                animate={{ x: ['0%', '-50%'] }}
+                transition={{repeat:Infinity, duration:15, ease:'linear'}}
+            >
+                <div className='flex flex-row items-center'>
+                   {items.map((_, index) => (
+                    <div key={index} className='flex flex-row items-center'>
+                        <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
+                        <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/>
+                    </div>
+                   ))}
+                </div>
+                <div className='flex flex-row items-center'>
+                   {items.map((_, index) => (
+                    <div key={index} className='flex flex-row items-center'>
+                        <span className='uppercase font-medium text-gray-dark text-4xl mx-8'>spike</span>
+                        <IconCrop11Filled size={18} className='text-gray-medium shrink-0'/>
+                    </div>
+                   ))}
+                </div>
+            </motion.div>
         </div>
 
 
@@ -109,10 +121,10 @@ const About = () => {
             {/* Img */}
             <div className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
                 
-                <div className="relative w-110 h-115 lg:w-full">
+                <div className="relative w-110 h-auto lg:h-115 lg:w-full">
                     <ProductAbout/>
 
-                    <div className='absolute bottom-16 lg:right-0 -right-20 z-20'>   
+                    <div className='flex justify-center relative md:absolute md:bottom-16 md:-right-20 lg:-right-28 xl:right-0 z-20 mt-5'>   
                         <OpinionAbout/>
                     </div>
                 </div>
