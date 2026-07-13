@@ -1,5 +1,6 @@
 import Button from "@/components/Button"
 import ProductsCard from "@/components/ProductsCard"
+import { useState } from "react";
 
 interface Product{
     id: string | number;
@@ -26,13 +27,21 @@ const product : Product[] = [
 
 
 const Products = () => {
+
+    // Controlar visibilidad de productos con estado 
+    // Iniciar estado en false, para que no muestre todos los productos
+    const[viewMore, setViewMore] = useState(false)
+
+    // True: mostrar todos los productos / False: mostrar 6 productos
+    const showProducts = viewMore? product : product.slice(0,6) 
+
   return (
     <section className="w-full min-h-screen lg:px-30 py-16 px-16">
         
         <h1 className="font-medium text-5xl mb-6">Spike Collections</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 lg:gap-10 place-items-center">
-            {product.slice(0,6).map(({id,img,name,color,price}:Product) => (
+            {showProducts.map(({id,img,name,color,price}:Product) => (
                 <ProductsCard 
                     key={id}
                     id={id}
@@ -46,7 +55,11 @@ const Products = () => {
         
 
         <div className="flex items-center justify-center pt-8 lg:pt-15">
-            <Button text="View more" styles="w-38"/>
+            <Button 
+                text={viewMore ? "view less" : "view more "} 
+                styles="w-38"
+                onClick={()=> setViewMore(!viewMore)}
+            />
         </div>
 
     </section>
