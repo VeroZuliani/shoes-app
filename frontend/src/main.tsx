@@ -7,6 +7,7 @@ import Products from './views/Products'
 import Testimonials from './views/Testimonials'
 import Contact from './views/Contact'
 import Footer from './views/Footer'
+import Faq from './views/Faq'
 
 
 
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')!).render(
     <Products/>
     <Testimonials/>
     <Contact/>
+    <Faq/>
     <Footer/>
   </StrictMode>,
 )

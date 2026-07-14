@@ -8,23 +8,23 @@ interface FooterLink{
 const footerLink : FooterLink[] = [
     {
         link: "About us",
-        href: "/about",
+        href: "#about",
     },
     {
         link: "Products",
-        href: "/products",
+        href: "#products",
     },
     {
         link: "Contact us",
-        href: "/contact",
+        href: "#contact",
     },
     {
         link: "FAQ",
-        href: "/faq",
+        href: "#faq",
     },
     {
         link: "Testimonials",
-        href: "/testimonial",
+        href: "#testimonials",
     },
 ]
 

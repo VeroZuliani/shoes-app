@@ -91,10 +91,10 @@ const Footer = () => {
 
                     {/* Mensaje para usuario */}
                     {isSubscribed && (
-                        <p className="text-white text-[1rem] mt-2 self-start">Gracias por suscribirte!</p>    
+                        <p className="text-white text-[0.8rem] mt-2 self-start">Gracias por suscribirte!</p>    
                     )}
                     {error && (
-                        <p className="text-error text-[1rem] mt-2 self-start">{error}</p>
+                        <p className="text-error text-[0.8rem] mt-2 self-start">{error}</p>
                     )}
                 </form>
             </div>
