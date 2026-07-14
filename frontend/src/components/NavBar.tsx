@@ -7,32 +7,31 @@ import { motion } from "motion/react";
 interface LinkData{
     text: string;
     href: string;
-
 }
 
 const link : LinkData[] = [
     {
-        href:"/",
+        href:"#home",
         text:"Home"    
     },
     {
-        href:"/about",
+        href:"#about",
         text:"About us"
     },
     {
-        href:"/products",
+        href:"#products",
         text:"Products"
     },
     {
-        href:"/testimonials",
+        href:"#testimonials",
         text:"Testimonials"
     },
     {
-        href:"/contact",
+        href:"#contact",
         text:"Contact us"
     },
     {
-        href:"/faq",
+        href:"#faq",
         text:"FAQ"
     },
 ]

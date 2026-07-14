@@ -5,7 +5,7 @@ import { IconPhoneFilled } from '@tabler/icons-react';
 
 const Contact = () => {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center lg:px-30 relative flex-col lg:block overflow-hidden">
+    <section id="contact" className="w-full min-h-screen flex items-center justify-center lg:px-30 relative flex-col lg:block overflow-hidden">
         
         <div className="bg-white shadow-2xl rounded-3xl p-6 lg:p-10 lg:absolute lg:top-1/2 lg:-translate-y-1/2 z-10 mt-5 mx-auto">
             <h1 className="font-semibold text-4xl lg:text-5xl mb-15 text-center">Contact Us</h1>

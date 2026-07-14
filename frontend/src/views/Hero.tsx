@@ -46,7 +46,7 @@ const Hero = () => {
 
   return (
     
-    <section className="w-full min-h-screen px-4 lg:px-30 relative z-10 overflow-hidden flex flex-col">
+    <section id="home" className="w-full min-h-screen px-4 lg:px-30 relative z-10 overflow-hidden flex flex-col">
         
         <NavBar/>
 

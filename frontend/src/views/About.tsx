@@ -10,7 +10,7 @@ const About = () => {
     const items = Array.from({ length:8 })
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center">
+    <section id='about' className="w-full min-h-screen flex flex-col items-center">
         
         {/* ABOUT SPEAK */}
         <div className='grid grid-cols-1 lg:grid-cols-2 w-full px-6 lg:px-0 '>

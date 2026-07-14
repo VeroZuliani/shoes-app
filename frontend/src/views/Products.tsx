@@ -36,7 +36,7 @@ const Products = () => {
     const showProducts = viewMore? product : product.slice(0,6) 
 
   return (
-    <section className="w-full min-h-screen lg:px-30 py-16 px-16">
+    <section id="products" className="w-full min-h-screen lg:px-30 py-16 px-16">
         
         <h1 className="font-medium text-5xl mb-6">Spike Collections</h1>
 

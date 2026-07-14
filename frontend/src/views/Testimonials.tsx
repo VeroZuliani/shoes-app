@@ -72,7 +72,7 @@ const Testimonials = () => {
 
   return (
 
-    <section className="w-full min-h-screen flex flex-col items-center px-16 lg:px-30 relative justify-center overflow-hidden ">
+    <section id="testimonials" className="w-full min-h-screen flex flex-col items-center px-16 lg:px-30 relative justify-center overflow-hidden ">
         
         <img className="w-full h-full absolute inset-0 -z-10 object-cover object-top scale-x-[-1]" src="/images/testimonial.jpg" alt=""/>
         <div className="absolute inset-0 bg-black/70 -z-10" />
