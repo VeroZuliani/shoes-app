@@ -134,7 +134,7 @@ const Hero = () => {
                                 />
                             </motion.div>
                         ))}
-                  </AnimatePresence>
+                    </AnimatePresence>
                 </div>
             </div>
 

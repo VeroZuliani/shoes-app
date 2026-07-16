@@ -1,18 +1,24 @@
 import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, easeOut } from 'framer-motion'
 
 
 interface FaqItem{
     question: string;
     answer: string;
     isOpen: boolean;
-    onToggle: () => void
+    onToggle: () => void;
+    index: number;
 }
 
 
-const FaqItem = ({question, answer, isOpen, onToggle}: FaqItem) => {
+const FaqItem = ({question, answer, isOpen, onToggle, index}: FaqItem) => {
   return (
-    <div className="border border-gray-dark rounded-xl p-5">
+    <motion.div 
+    initial={{y:40, opacity:0}}
+    whileInView={{y: 0, opacity: 1}}
+    transition={{duration:0.5, ease:easeOut, delay: index*0.25}}
+    viewport={{once: true, margin: "-50px"}}
+    className="border border-white rounded-xl p-5 md:p-10">
         
         {/* Pregunta y botón */}
         <button 
@@ -20,12 +26,12 @@ const FaqItem = ({question, answer, isOpen, onToggle}: FaqItem) => {
             className='w-full flex items-center justify-between text-left cursor-pointer'
             >
 
-            <div className='w-full font-semibold text-gray-dark'>
+            <div className='w-full font-semibold text-white'>
                 {question}
             </div>
 
             {/* Icono con rotación */}
-            <div className='text-gray-dark'>
+            <div className='text-white'>
                 {isOpen ?
                     <IconChevronUp stroke={3} size={20}/>
                     :
@@ -44,7 +50,7 @@ const FaqItem = ({question, answer, isOpen, onToggle}: FaqItem) => {
                     exit={{height:0, opacity:0}}
                     transition={{duration:0.3, ease:"easeInOut"}}
                 >
-                    <p className='font-normal text-gray-medium'>
+                    <p className='font-normal text-gray-light'>
                         {answer}
                     </p>
                 </motion.div>
@@ -52,7 +58,7 @@ const FaqItem = ({question, answer, isOpen, onToggle}: FaqItem) => {
         </AnimatePresence>
         
 
-    </div>
+    </motion.div>
   )
 }
 

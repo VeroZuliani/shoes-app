@@ -46,22 +46,27 @@ const Faq = () => {
         setOpenId(openId === id ? null : id)
     }
 
+
   return (
-    <section id="faq" className="w-full min-h-screen lg:px-30 p-16">
+    <section id="faq" className="w-full min-h-screen lg:px-30 p-16 relative overflow-hidden">
       
-        <h1 className="font-medium text-2xl md:text-4xl lg:text-5xl mb-6 text-center">Frequently Asked Questions</h1>
+        <img className="w-full h-full object-cover inset-0 absolute -z-10" src="/images/faq.jpg" alt="" />
+        <div className="absolute inset-0 bg-black/70 -z-10" />
+
+        <h1 className="text-white font-medium text-2xl md:text-4xl lg:text-5xl mb-16 text-center">Frequently Asked Questions</h1>
 
         {/* Acordeon Contenedor */}
         <div className="w-full flex flex-col gap-5">
             
             {/* Acordeon Item */}
-            {faq.map(({id, question, answer}: Faq) => (
+            {faq.map(({id, question, answer}: Faq, index: number) => (
                 <FaqItem
                     key={id}
                     question={question}
                     answer={answer}
                     isOpen={openId === id}
                     onToggle={() => handleToggle(id)}
+                    index={index}
                 />
             ))}
 
