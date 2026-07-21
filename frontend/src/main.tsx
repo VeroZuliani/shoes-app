@@ -1,24 +1,13 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Hero from './views/Hero'
-import About from './views/About'
-import Products from './views/Products'
-import Testimonials from './views/Testimonials'
-import Contact from './views/Contact'
-import Footer from './views/Footer'
-import Faq from './views/Faq'
-
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
 
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Hero/>
-    <About/>
-    <Products/>
-    <Testimonials/>
-    <Contact/>
-    <Faq/>
-    <Footer/>
-  </StrictMode>,
+
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>
+
 )

@@ -1,7 +1,8 @@
 import { useState } from "react"
-import Link from "./Link"
+import LinkNav from "./LinkNav"
 import { IconUser, IconX, IconMenu2 } from '@tabler/icons-react';
 import { motion } from "motion/react";
+import { useLocation, Link } from "react-router-dom";
 
 
 interface LinkData{
@@ -46,6 +47,8 @@ const NavBar = () => {
         setIsOpen(!isOpen)
     }
 
+    const location = useLocation()
+
   return (
     <header className="w-full items-center relative z-50">
         <div className="flex w-full justify-between relative h-20">
@@ -59,7 +62,7 @@ const NavBar = () => {
             >
                 <ul className="flex gap-6 flex-col lg:flex-row">
                     {link.map(( {href, text}: LinkData)=>(
-                        <Link 
+                        <LinkNav
                             key={text}
                             href={href}
                             text={text}
@@ -68,9 +71,9 @@ const NavBar = () => {
                 </ul>
 
                 <div className="flex">
-                    <a href="/login" className="lg:mx-4 mt-5 lg:m-0" onClick={toogleNavBar}>
+                    <Link to="/login" state={{bgLocation: location}} className="lg:mx-4 mt-5 lg:m-0" onClick={toogleNavBar}>
                         <IconUser stroke={1} />
-                    </a>
+                    </Link>
                 </div>  
             </nav>
 

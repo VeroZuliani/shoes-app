@@ -1,4 +1,4 @@
-import Link from "./Link";
+import LinkNav from "./LinkNav";
 
 interface FooterLink{
     link: string;
@@ -33,7 +33,7 @@ const FooterLink = () => {
     
     <ul className="flex gap-2 flex-col lg:flex-col text-white mt-5">
         {footerLink.map(( {link, href}: FooterLink) => (
-            <Link
+            <LinkNav
                 key={link}
                 text={link}
                 href={href}

@@ -1,0 +1,95 @@
+import Button from '@/components/Button';
+import { IconX, IconBrandGoogleFilled, IconEye, IconEyeOff } from '@tabler/icons-react';
+import { motion } from 'motion/react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
+const Login = () => {
+
+    //Cerrar ventana modal de login regresando a ruta previa
+    const navigate = useNavigate()
+
+    const handleClose = () => {
+        navigate(-1)
+    }
+
+    
+    // Controlar visibilidad de contraseña
+    const [showPassword, setShowPassword]  = useState(false)
+
+    const handleClick = () => {
+        setShowPassword(!showPassword)
+    }
+
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xs">
+        
+        <div className='w-70 md:w-100 md:h-125 bg-white p-8 rounded-2xl relative'>
+            <div className='flex items-center justify-between mb-5'>
+               <img src="/images/logo.png" alt="" className='w-20'/>
+
+               <button onClick={handleClose} className='cursor-pointer'>
+                    <IconX stroke={2} />
+                </button> 
+            </div>
+
+            <div className='flex flex-col items-center justify-center mb-5'>
+                <h1 className='text-[25px] font-bold'>Welcome Back</h1>
+                <p className='text-[12px]'>Please login to your account</p>
+            </div>
+
+
+            <form className='flex flex-col gap-4'>
+                <input type="text" placeholder='username' className='w-full border border-gray-light p-1 focus:outline-none text-[14px] text-gray-dark'/> 
+            
+                <div className='w-full relative'>
+                    <input type={showPassword ? "text" : "password"} placeholder='password' className='w-full border border-gray-light p-1 focus:outline-none text-[14px] pr-10 text-gray-dark'/>
+                    
+                    <button type='button' 
+                        onClick={handleClick}
+                        className='absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer'>
+                        {showPassword ? 
+                            <IconEye stroke={1.5} size={20} className='text-gray-medium'/>
+                            :
+                            <IconEyeOff stroke={1.5} size={20} className='text-gray-medium'/>
+                        }
+                    </button> 
+                </div>
+                
+                <button className='text-right underline text-[11px] cursor-pointer'>Forgot password?</button>
+
+                <Button text="Login" styles="w-full rounded-none"/>
+
+                <div className='flex items-center px-5'>
+                    <div className='flex-1 border border-gray-light'></div>
+                    <span className='px-3 text-gray-medium text-[14px]'>or</span>
+                    <div className='flex-1 border border-gray-light'></div>
+                </div>
+
+                <motion.button type='button' 
+                    className='flex items-center justify-center gap-2 cursor-pointer border border-gray-medium p-2 w-full hover:bg-gray-dark hover:text-white hover:border-transparent transition-colors duration-300'
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.5 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <IconBrandGoogleFilled />
+                    <span className='text-[14px]'>Google</span>
+                </motion.button>
+
+                <div className='flex flex-row items-center justify-center gap-2'>
+                    <p className='text-[12px] md:text-[14px]'>Don't you have an account?</p>
+                    <a href="" className='text-[12px] md:text-[14px] text-blue-light hover:underline'>Sign Up</a>
+                </div>
+            </form>
+
+
+        </div>
+        
+    </div>
+  )
+}
+
+export default Login
+
