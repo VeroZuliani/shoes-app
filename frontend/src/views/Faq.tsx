@@ -1,5 +1,6 @@
 import FaqItem from "@/components/FaqItem";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Faq{
     id: number;
@@ -38,6 +39,8 @@ const faq : Faq[] = [
 
 const Faq = () => {
 
+    const { t } = useTranslation()
+
     // Guardar Id de pregunta desplegada: Por defecto abre la 1ra
     const [openId, setOpenId] = useState<number | null>(1)
 
@@ -53,17 +56,17 @@ const Faq = () => {
         <img className="w-full h-full object-cover inset-0 absolute -z-10" src="/images/faq.jpg" alt="" />
         <div className="absolute inset-0 bg-black/70 -z-10" />
 
-        <h1 className="text-white font-medium text-2xl md:text-4xl lg:text-5xl mb-16 text-center">Frequently Asked Questions</h1>
+        <h1 className="text-white font-medium text-2xl md:text-4xl lg:text-5xl mb-16 text-center">{t('faq.title')}</h1>
 
         {/* Acordeon Contenedor */}
         <div className="w-full flex flex-col gap-5">
             
             {/* Acordeon Item */}
-            {faq.map(({id, question, answer}: Faq, index: number) => (
+            {faq.map(({id}: Faq, index: number) => (
                 <FaqItem
                     key={id}
-                    question={question}
-                    answer={answer}
+                    question={t(`faq.items.${id}.question`)}
+                    answer={t(`faq.items.${id}.answer`)}
                     isOpen={openId === id}
                     onToggle={() => handleToggle(id)}
                     index={index}

@@ -1,0 +1,153 @@
+{
+  "Home": "Home",
+  "About us": "About us",
+  "Products": "Products",
+  "Testimonials": "Testimonials",
+  "Contact us": "Contact us",
+  "FAQ": "FAQ",
+
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Please login to your account",
+    "username": "username",
+    "password": "password",
+    "forgot": "Forgot password?",
+    "button": "Login",
+    "or": "or",
+    "google": "Google",
+    "noAccount": "Don't you have an account?",
+    "signUp": "Sign Up"
+  },
+
+  "hero": {
+    "title": "The journey begins with the perfect pair",
+    "description": "Discover unparalleled style and unmatched comfort with Spike. Our meticulously crafted shoes redefine fashion, ensuring every step you take is a statement. Elevate your footwear game.",
+    "button": "Get Started",
+    "brands": {
+      "title": "Top Brands",
+      "subtitle": "Find your Dream Shoe Pair From 5000+ Collections"
+    }
+  },
+
+  "about": {
+    "title": "Spike: Stride in Style Comfortably.",
+    "description": "At Spike, we're more than just a shoes reselling brand; we're curators of a style and quality. With a passion for footwear, we handpick each pair, ensuring every step you take is a stride in fashion-forward confidence.",
+    "button": "Shop now!",
+    "offer": {
+      "subtitle": "At Spike Shoes",
+      "title": "We Offer :",
+      "feature1": {
+        "title": "Top Notch Quality",
+        "description": "At Spike we take pride in offering the finest footwear crafted with precision and dedication. Step into unmatched comfort, durability, and style."
+      },
+      "feature2": {
+        "title": "Comfort and Support",
+        "description": "Spike shoes redefine comfort with precision. Our designs seamlessly blend style and support, ensuring every step is a delight. Elevate your comfort with Spike."
+      },
+      "feature3": {
+        "title": "Style and Versatility",
+        "description": "With trend-conscious designs, vibrant colors, and timeless patterns. Spike offers a diverse range that complements every taste. Elevate your style with the perfect pairs!!"
+      }
+    }
+  },
+
+  "products": {
+    "title": "Spike Collections",
+    "viewMore": "View More",
+    "viewLess": "View Less",
+    "colorLabel": "Color",
+    "colors": {
+      "white": "White"
+    }
+  },
+
+  "testimonials": {
+    "title": "Customer Opinion",
+    "subtitle": "Discover the voices that shape our journey. Explore our review section and become part of the conversation today!",
+    "showMore": "see all reviews",
+    "showLess": "see less reviews",
+    "items": [
+      {
+        "brand": "Best Shoes",
+        "comment": "Spike shoes are more than just footwear; they're a statement. The quality is exceptional, and I've received countless compliments on their unique designs.",
+        "rol": "University professor"
+      },
+      {
+        "brand": "Amazing Collection",
+        "comment": "Spike shoes are more than just footwear; they're a statement. The quality is exceptional, and I've received countless compliments on their unique designs.",
+        "rol": "University professor"
+      },
+      {
+        "brand": "Top Quality",
+        "comment": "Spike shoes are more than just footwear; they're a statement. The quality is exceptional, and I've received countless compliments on their unique designs.",
+        "rol": "University professor"
+      },
+      {
+        "brand": "Amazon Essentials",
+        "comment": "Spike shoes are more than just footwear; they're a statement. The quality is exceptional, and I've received countless compliments on their unique designs.",
+        "rol": "University professor"
+      },
+      {
+        "brand": "Amazon Aware",
+        "comment": "Spike shoes are more than just footwear; they're a statement. The quality is exceptional, and I've received countless compliments on their unique designs.",
+        "rol": "University professor"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contact Us",
+    "phone": {
+      "label": "Phone number",
+      "value": "+91 8292726389 +9182922726389"
+    },
+    "address": {
+      "label": "Address",
+      "value": "1221, beach road, Kozhikode-650068"
+    },
+    "hours": {
+      "label": "Opening Hours",
+      "value": "Everyday 9:00 am to 10:00 pm"
+    }
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "1": {
+        "question": "What is the shipping time for Spike sneakers?",
+        "answer": "Standard shipping usually takes between 3 to 5 business days. Once your order is processed, you will receive a tracking number via email."
+      },
+      "2": {
+        "question": "How should I clean and care for my sneakers?",
+        "answer": "We recommend using a soft brush, mild soap, and warm water. Avoid machine washing or direct heat drying to preserve the materials."
+      },
+      "3": {
+        "question": "Are all Spike products 100% authentic?",
+        "answer": "Yes, all our footwear is 100% authentic, sourced directly from official manufacturers and verified distributors."
+      },
+      "4": {
+        "question": "What is your return and exchange policy?",
+        "answer": "We offer a 30-day hassle-free return and exchange policy. Items must be unworn, in original packaging, and accompanied by the purchase receipt."
+      },
+      "5": {
+        "question": "How long does a refund take to process?",
+        "answer": "Once we receive and inspect your returned items, refunds are issued back to your original payment method within 5 to 7 business days."
+      }
+    }
+  },
+
+  "footer": {
+    "description": "Elevate your step with Spike - where style meets comfort seamlessly. Our meticulously crafted shoes redefine fashion, ensuring each stride is a statement",
+    "company": "Company",
+    "newsletter": "Newsletter",
+    "email": "Your email address",
+    "success": "Thanks for subscribing!",
+    "errors": {
+      "empty": "Please enter an email.",
+      "invalid": "Enter a valid email.",
+      "general": "Subscription could not be completed."
+    }
+  }
+
+}

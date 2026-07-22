@@ -1,0 +1,153 @@
+{
+  "Home": "Inicio",
+  "About us": "Nosotros",
+  "Products": "Productos",
+  "Testimonials": "Testimonios",
+  "Contact us": "Contacto",
+  "FAQ": "FAQ",
+
+  "login": {
+    "title": "Bienvenido de nuevo",
+    "subtitle": "Por favor ingresa a tu cuenta",
+    "username": "usuario",
+    "password": "contraseña",
+    "forgot": "¿Olvidaste tu contraseña?",
+    "button": "Iniciar sesión",
+    "or": "o",
+    "google": "Google",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Registrarse"
+  },
+
+  "hero": {
+    "title": "El viaje comienza con el par perfecto",
+    "description": "Descubre un estilo incomparable y una comodidad sin igual con Spike. Nuestro calzado minuciosamente diseñado redefine la moda, asegurando que cada paso sea una declaración de estilo. Eleva tu calzado.",
+    "button": "Empezar",
+    "brands": {
+      "title": "Marcas Principales",
+      "subtitle": "Encuentra el par de tus sueños entre más de 5000 colecciones"
+    }
+  },
+
+  "about": {
+    "title": "Spike: Camina con Estilo y Comodidad.",
+    "description": "En Spike, somos más que una marca de calzado; somos curadores de estilo y calidad. Apasionados por el calzado, seleccionamos cuidadosamente cada par para garantizar que cada paso que des sea con confianza y a la moda.",
+    "button": "Comprar",
+    "offer": {
+      "subtitle": "En Spike Shoes",
+      "title": "Ofrecemos :",
+      "feature1": {
+        "title": "Calidad de Primer Nivel",
+        "description": "En Spike nos enorgullece ofrecer el mejor calzado, elaborado con precisión y dedicación. Experimenta una comodidad, durabilidad y estilo inigualables."
+      },
+      "feature2": {
+        "title": "Comodidad y Soporte",
+        "description": "Los calzados Spike redefinen el confort con precisión. Nuestros diseños combinan a la perfección estilo y soporte, haciendo que cada paso sea un placer. Eleva tu comodidad con Spike."
+      },
+      "feature3": {
+        "title": "Estilo y Versatilidad",
+        "description": "Con diseños en tendencia, colores vibrantes y patrones atemporales. Spike ofrece una gama diversa que se adapta a todos los gustos. ¡Eleva tu estilo con el par perfecto!"
+      }
+    }
+  },
+
+  "products": {
+    "title": "Colecciones Spike",
+    "viewMore": "Ver más",
+    "viewLess": "Ver menos",
+    "colorLabel": "Color",
+    "colors": {
+      "white": "Blanco"
+    }
+  },
+
+  "testimonials": {
+    "title": "Opiniones de Clientes",
+    "subtitle": "Descubre las voces que impulsan nuestro camino. ¡Explora nuestra sección de reseñas y sé parte de la comunidad hoy mismo!",
+    "showMore": "ver más reseñas",
+    "showLess": "ver menos reseñas",
+    "items": [
+      {
+        "brand": "Mejores Calzados",
+        "comment": "Los calzados Spike son más que un simple calzado; son una declaración de estilo. La calidad es excepcional y he recibido innumerables elogios por sus diseños únicos.",
+        "rol": "Profesor universitario"
+      },
+      {
+        "brand": "Colección Increíble",
+        "comment": "Los calzados Spike son más que un simple calzado; son una declaración de estilo. La calidad es excepcional y he recibido innumerables elogios por sus diseños únicos.",
+        "rol": "Profesor universitario"
+      },
+      {
+        "brand": "Calidad Superior",
+        "comment": "Los calzados Spike son más que un simple calzado; son una declaración de estilo. La calidad es excepcional y he recibido innumerables elogios por sus diseños únicos.",
+        "rol": "Profesor universitario"
+      },
+      {
+        "brand": "Esenciales de Amazon",
+        "comment": "Los calzados Spike son más que un simple calzado; son una declaración de estilo. La calidad es excepcional y he recibido innumerables elogios por sus diseños únicos.",
+        "rol": "Profesor universitario"
+      },
+      {
+        "brand": "Amazon Aware",
+        "comment": "Los calzados Spike son más que un simple calzado; son una declaración de estilo. La calidad es excepcional y he recibido innumerables elogios por sus diseños únicos.",
+        "rol": "Profesor universitario"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contáctanos",
+    "phone": {
+      "label": "Teléfono",
+      "value": "+91 8292726389 +9182922726389"
+    },
+    "address": {
+      "label": "Dirección",
+      "value": "1221, beach road, Kozhikode-650068"
+    },
+    "hours": {
+      "label": "Horario de Atención",
+      "value": "Todos los días de 9:00 am a 10:00 pm"
+    }
+  },
+
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": {
+      "1": {
+        "question": "¿Cuál es el tiempo de envío de las zapatillas Spike?",
+        "answer": "El envío estándar generalmente tarda entre 3 y 5 días hábiles. Una vez procesado tu pedido, recibirás un número de seguimiento por correo electrónico."
+      },
+      "2": {
+        "question": "¿Cómo debo limpiar y cuidar mis zapatillas?",
+        "answer": "Recomendamos usar un cepillo suave, jabón neutro y agua tibia. Evita el lavado a máquina o el secado con calor directo para preservar los materiales."
+      },
+      "3": {
+        "question": "¿Todos los productos Spike son 100% auténticos?",
+        "answer": "Sí, todo nuestro calzado es 100% auténtico, obtenido directamente de fabricantes oficiales y distribuidores verificados."
+      },
+      "4": {
+        "question": "¿Cuál es su política de cambios y devoluciones?",
+        "answer": "Ofrecemos una política de cambio y devolución de 30 días sin complicaciones. Los productos deben estar sin usar, en su empaque original y acompañados por el recibo de compra."
+      },
+      "5": {
+        "question": "¿Cuánto tarda en procesarse un reembolso?",
+        "answer": "Una vez que recibimos e inspeccionamos los artículos devueltos, los reembolsos se acreditan a tu método de pago original en un plazo de 5 a 7 días hábiles."
+      }
+    }
+  },
+
+  "footer": {
+    "description": "Eleva tu pisada con Spike, donde el estilo se combina a la perfección con la comodidad. Nuestro calzado meticulosamente diseñado redefine la moda, asegurando que cada paso sea una declaración.",
+    "company": "Compañía",
+    "newsletter": "Suscribite",
+    "email": "Tu correo electrónico",
+    "success": "¡Gracias por suscribirte!",
+    "errors": {
+      "empty": "Por favor, ingrese un email.",
+      "invalid": "Ingrese un correo válido.",
+      "general": "No se pudo completar la suscripción."
+    }
+  }
+
+}

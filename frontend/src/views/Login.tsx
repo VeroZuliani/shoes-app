@@ -3,9 +3,11 @@ import { IconX, IconBrandGoogleFilled, IconEye, IconEyeOff } from '@tabler/icons
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 
 const Login = () => {
+    
+    const { t } = useTranslation();
 
     //Cerrar ventana modal de login regresando a ruta previa
     const navigate = useNavigate()
@@ -36,16 +38,16 @@ const Login = () => {
             </div>
 
             <div className='flex flex-col items-center justify-center mb-5'>
-                <h1 className='text-[25px] font-bold'>Welcome Back</h1>
-                <p className='text-[12px]'>Please login to your account</p>
+                <h1 className='text-[25px] font-bold'>{t('login.title')}</h1>
+                <p className='text-[12px]'>{t('login.subtitle')}</p>
             </div>
 
 
             <form className='flex flex-col gap-4'>
-                <input type="text" placeholder='username' className='w-full border border-gray-light p-1 focus:outline-none text-[14px] text-gray-dark'/> 
+                <input type="text" placeholder={t('login.username')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] text-gray-dark'/> 
             
                 <div className='w-full relative'>
-                    <input type={showPassword ? "text" : "password"} placeholder='password' className='w-full border border-gray-light p-1 focus:outline-none text-[14px] pr-10 text-gray-dark'/>
+                    <input type={showPassword ? "text" : "password"} placeholder={t('login.password')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] pr-10 text-gray-dark'/>
                     
                     <button type='button' 
                         onClick={handleClick}
@@ -58,13 +60,13 @@ const Login = () => {
                     </button> 
                 </div>
                 
-                <button className='text-right underline text-[11px] cursor-pointer'>Forgot password?</button>
+                <button className='text-right underline text-[11px] cursor-pointer'>{t('login.forgot')}</button>
 
-                <Button text="Login" styles="w-full rounded-none"/>
+                <Button text={t('login.button')} styles="w-full rounded-none"/>
 
                 <div className='flex items-center px-5'>
                     <div className='flex-1 border border-gray-light'></div>
-                    <span className='px-3 text-gray-medium text-[14px]'>or</span>
+                    <span className='px-3 text-gray-medium text-[14px]'>{t('login.or')}</span>
                     <div className='flex-1 border border-gray-light'></div>
                 </div>
 
@@ -75,12 +77,12 @@ const Login = () => {
                     whileTap={{ scale: 0.95 }}
                 >
                     <IconBrandGoogleFilled />
-                    <span className='text-[14px]'>Google</span>
+                    <span className='text-[14px]'>{t('login.google')}</span>
                 </motion.button>
 
                 <div className='flex flex-row items-center justify-center gap-2'>
-                    <p className='text-[12px] md:text-[14px]'>Don't you have an account?</p>
-                    <a href="" className='text-[12px] md:text-[14px] text-blue-light hover:underline'>Sign Up</a>
+                    <p className='text-[12px] md:text-[14px]'>{t('login.noAccount')}</p>
+                    <a href="" className='text-[12px] md:text-[14px] text-blue-light hover:underline'>{t('login.signUp')}</a>
                 </div>
             </form>
 

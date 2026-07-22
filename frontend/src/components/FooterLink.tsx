@@ -1,4 +1,5 @@
 import LinkNav from "./LinkNav";
+import { useTranslation } from "react-i18next";
 
 interface FooterLink{
     link: string;
@@ -29,13 +30,16 @@ const footerLink : FooterLink[] = [
 ]
 
 const FooterLink = () => {
+
+    const { t } = useTranslation()
+
   return (
     
     <ul className="flex gap-2 flex-col lg:flex-col text-white mt-5">
         {footerLink.map(( {link, href}: FooterLink) => (
             <LinkNav
                 key={link}
-                text={link}
+                text={t(link)}
                 href={href}
             />
         ))}

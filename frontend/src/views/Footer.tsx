@@ -2,12 +2,15 @@ import FooterIcon from '@/components/FooterIcon';
 import FooterLink from '@/components/FooterLink';
 import { IconSend } from '@tabler/icons-react';
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 
 const Footer = () => {
+
+    const { t } = useTranslation()
 
     const [email, setEmail] = useState('')
     const [isSubscribed, setIsSubscribed] = useState(false)
@@ -21,13 +24,13 @@ const Footer = () => {
 
         // Validar campo vacio
         if (!email.trim()) {
-            setError('Por favor, ingrese un email.')
+            setError(t('footer.errors.empty'))
             return
         } 
 
         // Validar email con expresión regular
         if (!emailRegex.test(email)) {
-            setError('Ingrese un correo válido.')
+            setError(t('footer.errors.invalid'))
             return
         }
 
@@ -41,7 +44,7 @@ const Footer = () => {
             setTimeout(() => setIsSubscribed(false), 4000)
         }
         catch(error){
-            setError('No se pudo completar la suscripción.')
+            setError(t('footer.errors.general'))
         }
     }
 
@@ -52,22 +55,22 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-20 sm:px-16 lg:p-0">
             <div className="flex flex-col lg:col-span-2">
                 <h1 className='text-white uppercase text-4xl lg:text-6xl'>spike</h1>
-                <p className='text-white text-sm lg:text-base mt-10'>Elevate your step with Spike - where style meets comfort seamlessly. Our meticulously crafted shoes redefine fashion, ensuring each stride is a statement</p>
+                <p className='text-white text-sm lg:text-base mt-10'>{t('footer.description')}</p>
                 <FooterIcon/>
             </div>
 
             <div>
-                <h2 className='text-white text-base lg:text-lg font-semibold'>Company</h2>
+                <h2 className='text-white text-base lg:text-lg font-semibold'>{t('footer.company')}</h2>
                 <FooterLink/>
             </div>
 
             <div>
-                <h2 className='text-white text-base lg:text-lg font-semibold'>Company</h2>
+                <h2 className='text-white text-base lg:text-lg font-semibold'>{t('footer.company')}</h2>
                 <FooterLink/>
             </div>
             
             <div className='flex items-center flex-col lg:mt-8 lg:col-span-2'>
-                <h3 className="text-gray-light flex justify-center mb-10 text-2xl lg:text-3xl">Newsletter</h3>
+                <h3 className="text-gray-light flex justify-center mb-10 text-2xl lg:text-3xl">{t('footer.newsletter')}</h3>
                 
                 <form onSubmit={handleSubmit} noValidate className="w-full flex flex-col">
                     <div className="w-full flex flex-row relative">
@@ -75,7 +78,7 @@ const Footer = () => {
                             value={email} 
                             type="email" 
                             name="email" 
-                            placeholder="Your email address" 
+                            placeholder={t('footer.email')} 
                             className="w-full bg-gray-dark text-white placeholder:text-gray-medium text-sm lg:text-base p-4 pl-3 rounded-lg pr-12 focus:outline-none hover:text-white" 
                             autoComplete="off"
                             onChange={(e) => {
@@ -91,7 +94,7 @@ const Footer = () => {
 
                     {/* Mensaje para usuario */}
                     {isSubscribed && (
-                        <p className="text-white text-[0.8rem] mt-2 self-start">Gracias por suscribirte!</p>    
+                        <p className="text-white text-[0.8rem] mt-2 self-start">{t('footer.success')}</p>    
                     )}
                     {error && (
                         <p className="text-error text-[0.8rem] mt-2 self-start">{error}</p>

@@ -5,6 +5,7 @@ import Shoes from "../components/Shoes"
 import NavBar from "@/components/NavBar"
 import { AnimatePresence, motion } from "motion/react"
 import { useEffect, useRef, useState } from "react"
+import { useTranslation } from "react-i18next";
 
 
 //Defino lista de shoes 
@@ -18,6 +19,8 @@ const shoesList = [
 
 
 const Hero = () => {
+
+    const { t } = useTranslation()
 
     const brands = useRef<HTMLDivElement>(null)
 
@@ -74,15 +77,15 @@ const Hero = () => {
             {/* Col. Izq: Texto y Btn */}
             <div className="flex flex-col lg:pr-15 items-center lg:items-stretch">
                 <h1 className="text-black font-medium text-5xl lg:text-[3rem] max-w-100 lg:w-full lg:leading-13 ">
-                    The journey begins with the perfect pair
+                    {t('hero.title')}
                 </h1>
                 <p className="text-gray-medium mt-10 mb-18 text-md lg:text-base leading-6 max-w-100 lg:w-full">
-                    Discover unparalleled style and unmatched comfort with Spike. Our meticulously crafted shoes redefine fashion, ensuring every step you take is a statement. Elevate your footwear game
+                    {t('hero.description')}
                 </p>
 
                 {/* Btn y flecha de scroll*/}
                 <div className="flex flex-col items-center w-37.5 ">
-                    <Button text="Get Started" styles="w-37.5"/>
+                    <Button text={t('hero.button')} styles="w-37.5"/>
                     
                     <motion.button type="button" className="mt-3 cursor-pointer" 
                     onClick={handleScroll}
@@ -142,8 +145,8 @@ const Hero = () => {
 
         {/* Brands */}
         <div ref={brands} className="w-full flex items-center justify-center flex-col mb-20">
-            <h3 className="text-2xl lg:text-3xl font-semibold text-gray-dark">Top Brands</h3>
-            <p className="text-gray-medium mt-2 mb-8 text-sm text-center lg:text-lg">Find your Dream Shoe Pair From 5000+ Collections</p>
+            <h3 className="text-2xl lg:text-3xl font-semibold text-gray-dark">{t('hero.brands.title')}</h3>
+            <p className="text-gray-medium mt-2 mb-8 text-sm text-center lg:text-lg">{t('hero.brands.subtitle')}</p>
             <div className="flex lg:flex-row flex-wrap justify-center">
                 <Brands src="/images/brand/brand1.png" alt="nike"/>
                 <Brands src="/images/brand/brand2.png" alt="adidas"/>

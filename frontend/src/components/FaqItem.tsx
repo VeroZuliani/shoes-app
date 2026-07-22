@@ -16,7 +16,7 @@ const FaqItem = ({question, answer, isOpen, onToggle, index}: FaqItem) => {
     <motion.div 
     initial={{y:40, opacity:0}}
     whileInView={{y: 0, opacity: 1}}
-    transition={{duration:0.5, ease:easeOut, delay: index*0.25}}
+    transition={{duration:0.5, ease:easeOut, delay: index*0.15}}
     viewport={{once: true, margin: "-50px"}}
     className="border border-white rounded-xl p-5 md:p-10">
         

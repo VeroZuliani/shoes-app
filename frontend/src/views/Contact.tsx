@@ -1,27 +1,30 @@
 import ContactInfo from "../components/ContactInfo";
 import { Map, MapControls } from "@/components/ui/map";
 import { IconPhoneFilled } from '@tabler/icons-react';
-
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+
+    const { t } = useTranslation()
+
   return (
     <section id="contact" className="w-full min-h-screen flex items-center justify-center lg:px-30 relative flex-col lg:block overflow-hidden">
         
         <div className="bg-white shadow-2xl rounded-3xl p-6 lg:p-10 lg:absolute lg:top-1/2 lg:-translate-y-1/2 z-10 mt-5 mx-auto">
-            <h1 className="font-semibold text-4xl lg:text-5xl mb-15 text-center">Contact Us</h1>
+            <h1 className="font-semibold text-4xl lg:text-5xl mb-15 text-center">{t('contact.title')}</h1>
             <ContactInfo 
-                title= "Phone number"
-                value= "+91 8292726389 +9182922726389"
+                title= {t('contact.phone.label')}
+                value= {t('contact.phone.value')}
                 icon= {<IconPhoneFilled size={23} className="text-white"/>}
             />
             <ContactInfo 
-                title= "Address"
-                value= "1221, beach road, kozhikode-650068"
+                title= {t('contact.address.label')}
+                value= {t('contact.address.value')}
                 icon= {<IconPhoneFilled size={23} className="text-white"/>}
             />
             <ContactInfo 
-                title= "Opening Hours"
-                value= "Everyday 9:00 am to 10:00 pm"
+                title= {t('contact.hours.label')}
+                value= {t('contact.hours.value')}
                 icon= {<IconPhoneFilled size={23} className="text-white"/>}
             />
         </div>

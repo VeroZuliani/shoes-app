@@ -1,4 +1,5 @@
 import { IconHeart } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
 
 interface Props{
     id: string | number;
@@ -9,7 +10,13 @@ interface Props{
 }
 
 const ProductsCard = ({img, name, color, price}: Props) => {
-  return (
+    
+    const { t } = useTranslation()
+
+    // Coincidir con JSON: White -> white
+    const colorName = color.toLowerCase()
+
+    return (
     <div className="w-full shadow-xl rounded-3xl px-4 py-4">
         
         <img src={img} alt="" className="w-full h-full aspect-square rounded-3xl object-cover object-center"/>
@@ -23,9 +30,9 @@ const ProductsCard = ({img, name, color, price}: Props) => {
                 </button>
             </div>
         
-            <div className="text-gray-medium space-x-4 mt-2 text-[14px]">
-                <span>Color: {color}</span>
-                <span>|</span>
+            <div className="text-gray-medium space-x-4 mt-2 text-[12px] md:text-[14px] flex flex-col md:flex-row">
+                <span>Color: {t(`products.colors.${colorName}`, color)}</span>
+                <span className="hidden md:inline">|</span>
                 <span>Rs {price}/-</span>
             </div>
         </div>
