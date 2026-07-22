@@ -4,6 +4,10 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+
 
 const Login = () => {
     
@@ -25,6 +29,28 @@ const Login = () => {
     }
 
 
+    // Schema de validación con Zod
+    const schema = z.object({
+        username: z.string().min(4, t('login.errorUsername')),
+        password: z.string().min(6, t('login.errorPassword')),
+    })
+
+    type loginFormInputs = z.infer<typeof schema>
+
+    const{
+        register,
+        handleSubmit,
+        formState: {errors},
+        } = useForm<loginFormInputs>({
+            resolver: zodResolver(schema),
+        })
+    
+    const onSubmit = (data: loginFormInputs) => {
+        console.log("Login exitoso:", data)
+        navigate('/catalog')
+    }
+
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xs">
         
@@ -38,16 +64,21 @@ const Login = () => {
             </div>
 
             <div className='flex flex-col items-center justify-center mb-5'>
-                <h1 className='text-[25px] font-bold'>{t('login.title')}</h1>
+                <h1 className='text-[20px] md:text-[25px] font-bold'>{t('login.title')}</h1>
                 <p className='text-[12px]'>{t('login.subtitle')}</p>
             </div>
 
 
-            <form className='flex flex-col gap-4'>
-                <input type="text" placeholder={t('login.username')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] text-gray-dark'/> 
+            <form className='flex flex-col gap-4' onSubmit={handleSubmit(onSubmit)}>
+                <input type="text" placeholder={t('login.username')} {...register('username')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] text-gray-dark'/> 
             
+                {/* Mostrar error de username si existe */}
+                {errors.username && (
+                    <span className='text-error text-[9px] md:text-[11px]'>{errors.username.message}</span>
+                )}
+
                 <div className='w-full relative'>
-                    <input type={showPassword ? "text" : "password"} placeholder={t('login.password')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] pr-10 text-gray-dark'/>
+                    <input type={showPassword ? "text" : "password"} placeholder={t('login.password')} {...register('password')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] pr-10 text-gray-dark'/>
                     
                     <button type='button' 
                         onClick={handleClick}
@@ -59,6 +90,11 @@ const Login = () => {
                         }
                     </button> 
                 </div>
+
+                {/* Mostrar error de password si existe */}
+                {errors.password && (
+                    <span className='text-error text-[9px] md:text-[11px]'>{errors.password.message}</span>
+                )}
                 
                 <button className='text-right underline text-[11px] cursor-pointer'>{t('login.forgot')}</button>
 

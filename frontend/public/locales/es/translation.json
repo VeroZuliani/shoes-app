@@ -16,7 +16,9 @@
     "or": "o",
     "google": "Google",
     "noAccount": "¿No tienes una cuenta?",
-    "signUp": "Registrarse"
+    "signUp": "Registrarse",
+    "errorUsername": "El usuario debe tener al menos 4 caracteres",
+    "errorPassword": "La contraseña debe tener al menos 6 caracteres"
   },
 
   "hero": {

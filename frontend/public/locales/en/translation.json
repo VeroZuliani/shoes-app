@@ -16,7 +16,9 @@
     "or": "or",
     "google": "Google",
     "noAccount": "Don't you have an account?",
-    "signUp": "Sign Up"
+    "signUp": "Sign Up",
+    "errorUsername": "Username must be at least 4 characters long",
+    "errorPassword": "Password must be at least 6 characters long"
   },
 
   "hero": {
