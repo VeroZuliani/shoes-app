@@ -2,7 +2,7 @@
 
 Aplicación web e-commerce, interactiva y responsive con stack MERN, enfocada en la venta de calzado deportivo.
 
-🚀 **Live Demo:** [Ver proyecto desplegado]
+🚀 **Live Demo:** [Ver Proyecto Desplegado](https://shoes-app-eight-omega.vercel.app)
 
 ## Objetivo
 Brindar a los usuarios una experiencia de compra de calzado deportivo, explorar productos desde una landing page atractiva, donde podrán autenticarse y acceder a un catálogo con flujo de compra.
@@ -36,7 +36,7 @@ Diseño inspirado en el concepto de [ShoeSpike en Behance](https://www.behance.n
 * **Base de Datos:** MongoDB
 
 > [!NOTE]
-> Actualmente el despliegue está enfocado en la arquitectura Frontend*
+> Actualmente el despliegue está enfocado en la arquitectura Frontend
 
 ---
 ## ⚙️ Instalación y Configuración Local
@@ -62,6 +62,5 @@ npm run dev
 ---
 ### ✒️ Desarrollado por:
 
-- Mi nombre
-[Linkedin](https://linkedin/) 
+**Verónica Inés Zuliani** | [LinkedIn](https://www.linkedin.com/in/veronica-zuliani) 
 
