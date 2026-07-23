@@ -68,7 +68,7 @@ const NavBar = () => {
             </a>
 
             {/* isOpen es true: se muestra (flex), si es false: se esconde (hidden) */}
-            <nav className={`flex lg:items-center mx-auto lg:gap-16 flex-col lg:flex-row lg:static absolute top-5 -right-1 -z-10 lg:shadow-none shadow p-10 bg-white border border-gray-light rounded-md lg:border-none
+            <nav className={`flex lg:items-center mx-auto lg:gap-16 flex-col lg:flex-row lg:static absolute top-5 -right-1 -z-10 lg:z-10 lg:shadow-none shadow p-10 bg-white border border-gray-light rounded-md lg:border-none
                 ${isOpen ? "flex" : "hidden"} lg:flex`}
             >
                 <ul className="flex gap-6 flex-col lg:flex-row">

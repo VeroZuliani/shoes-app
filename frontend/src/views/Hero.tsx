@@ -49,27 +49,28 @@ const Hero = () => {
 
   return (
     
-    <section id="home" className="w-full min-h-screen px-4 lg:px-30 relative z-10 overflow-hidden flex flex-col">
+    <section id="home" className="w-full min-h-screen px-4 lg:px-30 relative z-10 flex flex-col">
         
         <NavBar/>
 
         {/* Arco Adidas */}
-        <div className="absolute -z-10 bg-gray-dark rounded-l-full flex items-center justify-end overflow-hidden  
-                        w-[95vw] h-[130vw] top-1/2 left-1/2 translate-x-5 -translate-y-1/2 mt-50
-                        md:w-[55vw] md:h-[106vw] md:top-1/2 md:left-1/2 md:translate-x-12 md:-translate-y-1/2
-                        lg:w-[35vw] lg:h-[75vw] lg:top-0 lg:bottom-auto lg:right-0 lg:left-auto lg:translate-x-30 lg:translate-y-0 lg:mt-0">
+        <div className="absolute inset-0 overflow-hidden -z-10">
+            <div className="absolute -z-10 bg-gray-dark rounded-l-full flex items-center justify-end overflow-hidden  
+                            w-[95vw] h-[130vw] top-1/2 left-1/2 translate-x-5 -translate-y-1/2 mt-50
+                            md:w-[55vw] md:h-[106vw] md:top-1/2 md:left-1/2 md:translate-x-12 md:-translate-y-1/2
+                            lg:w-[35vw] lg:h-[75vw] lg:top-0 lg:bottom-auto lg:right-0 lg:left-auto lg:translate-x-30 lg:translate-y-0 lg:mt-0">
 
-            <h1 className="uppercase text-white font-extrabold w-min h-auto inline-block 
-                        -rotate-90 origin-right translate-x-0
-                        absolute top-0 translate-y-0
-                        text-[25vw] right-[60vw]
-                        md:text-[10rem] md:right-[19vw] 
-                        lg:text-[9.5rem] lg:right-[17vw] 
-                        xl:text-[10rem]">
-                adidas
-            </h1>
+                <h1 className="uppercase text-white font-extrabold w-min h-auto inline-block 
+                            -rotate-90 origin-right translate-x-0
+                            absolute top-0 translate-y-0
+                            text-[25vw] right-[60vw]
+                            md:text-[10rem] md:right-[19vw] 
+                            lg:text-[9.5rem] lg:right-[17vw] 
+                            xl:text-[10rem]">
+                    adidas
+                </h1>
+            </div>
         </div>
-
 
        {/* Contenido Principal */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 z-10 mt-15">
@@ -111,6 +112,7 @@ const Hero = () => {
                         animate={{ opacity: 1, scale: 1, rotate: 25 }}
                         exit={{ opacity: 0, scale: 0.85, rotate: 30 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
+                        className="pointer-events-none"
                     >
                         <Shoes 
                         src={shoesList[indexPrincipal].src} 
@@ -119,7 +121,7 @@ const Hero = () => {
                         </motion.div>
                 </AnimatePresence>
 
-                <div className="flex flex-row items-center gap-2 -mt-5 lg:-mt-10 -mx-15 mr-15 lg:mr-20s">
+                <div className="flex flex-row items-center gap-2 -mt-5 lg:-mt-10 -mx-15 mr-15 lg:mr-20">
                     <AnimatePresence mode="popLayout">
                         {secondaryShoes.map((shoes) => (
                             <motion.div
@@ -128,7 +130,7 @@ const Hero = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.8 }}
                                 transition={{ duration: 0.3 }}
-                                className="flex items-center"
+                                className="flex items-center pointer-events-none"
                             >
                                 <Shoes 
                                 src={shoes.src} 
