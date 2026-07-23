@@ -69,7 +69,7 @@ const Login = () => {
             </div>
 
 
-            <form className='flex flex-col gap-4' onSubmit={handleSubmit(onSubmit)}>
+            <form className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" placeholder={t('login.username')} {...register('username')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] text-gray-dark'/> 
             
                 {/* Mostrar error de username si existe */}
@@ -77,7 +77,7 @@ const Login = () => {
                     <span className='text-error text-[9px] md:text-[11px]'>{errors.username.message}</span>
                 )}
 
-                <div className='w-full relative'>
+                <div className='w-full relative mt-4'>
                     <input type={showPassword ? "text" : "password"} placeholder={t('login.password')} {...register('password')} className='w-full border border-gray-light p-1 focus:outline-none text-[14px] pr-10 text-gray-dark'/>
                     
                     <button type='button' 
@@ -98,9 +98,9 @@ const Login = () => {
                 
                 <button className='text-right underline text-[11px] cursor-pointer'>{t('login.forgot')}</button>
 
-                <Button text={t('login.button')} styles="w-full rounded-none"/>
+                <Button text={t('login.button')} styles="w-full rounded-none mt-4"/>
 
-                <div className='flex items-center px-5'>
+                <div className='flex items-center px-5 m-4'>
                     <div className='flex-1 border border-gray-light'></div>
                     <span className='px-3 text-gray-medium text-[14px]'>{t('login.or')}</span>
                     <div className='flex-1 border border-gray-light'></div>
@@ -116,7 +116,7 @@ const Login = () => {
                     <span className='text-[14px]'>{t('login.google')}</span>
                 </motion.button>
 
-                <div className='flex flex-row items-center justify-center gap-2'>
+                <div className='flex flex-row items-center justify-center gap-2 mt-4'>
                     <p className='text-[12px] md:text-[14px]'>{t('login.noAccount')}</p>
                     <a href="" className='text-[12px] md:text-[14px] text-blue-light hover:underline'>{t('login.signUp')}</a>
                 </div>
